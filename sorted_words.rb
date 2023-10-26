@@ -5,13 +5,14 @@
 
 words = []
 
-    print "Enter as many words (or press Enter to finish)? "
+loop do
+    print "Enter a word (or press Enter to exit): "
     adding_word = gets.chomp
 
-    while adding_word != ""
-        words.push(adding_word)
-        adding_word = gets.chomp
-        end
+    break if adding_word == ""
+    words.push(adding_word)
+end
+
 
 
 sorted = words.sort
